@@ -1,0 +1,349 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} ГЛАВНАЯ СТРАНИЦА {% endblock %}
+{% block head %} 
+<style type="text/css">
+  form { 
+   padding: 20px; /* Поля */
+   background: #E5D3BD; /* Цвет фона */
+   border: 2px solid #732f02; /* Параметры рамки */
+  }
+ </style>
+<style>
+.layer {
+    background: #e6c69f ;
+    border: 2px solid #b3590a; /* Параметры рамки */
+    padding-bottom: 13px; /* Поле снизу от текста */
+    padding-top: 13px; /* Поле сверху от текста */
+    scroll-padding-left: 13px;
+    scroll-padding-right: 13px;
+    text-align: center; /* Выравнивание по центру */
+   }
+</style>
+
+<style>
+.wrap {
+  display: flex;
+  justify-content: space-around;
+}
+.cart {
+  position: relative;
+  width: 140px;
+  height: 200px;
+  perspective: 700px;
+  margin: 1%;
+}
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+  backface-visibility: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.cart:hover .front {
+  transform: rotateY(-180deg);
+}
+.cart:hover .back {
+  transform: rotateY(0);
+}
+</style>
+
+
+
+{% endblock %}
+{% block content %} 
+
+<!-- <div class="top"> -->
+    <!-- <div class="mw_1416 clearfix"> -->
+      <!-- <span class="adres">Санкт-Петербург</span> -->
+  <!--  -->
+      <!-- <a href="tel:88129955450" class="phone">8(812) 995-54-50</a> -->
+  <!--  -->
+      <!-- <a href="/discounts/" class="top_link tl_actions">Скидки и акции</a> -->
+  <!--  -->
+      <!-- <a href="/dostavka-orehov-suhofruktov-speciy/" class="top_link">Оплата и доставка</a> -->
+  <!--  -->
+      <!-- <a href="/reviews/" class="top_link">Отзывы</a> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- <center>  -->
+       <!-- <form action="/login/" method="post" id="modal_form_login"> -->
+            <!-- <input type="hidden" name="_token" id="token" value="7UnAWUWp1LomKnv2p6xuXV14oqd1v0avdefmwYAA"> -->
+            <!-- <label>Email: *</label> -->
+            <!-- <input class="login-input" name="login"> -->
+      <!--  -->
+            <!-- <label>Пароль: *</label> -->
+            <!-- <input type="password" class="login-input" name="password"> -->
+            <!-- <input type="submit" class="btn btn-login" value="Войти"> -->
+        <!-- </form> -->
+      <!--  -->
+          <!-- <div class="text_center"> -->
+            <!-- <a href="/forgot-password/" class="link_text link_border">Забыли пароль</a> -->
+          <!-- </div> -->
+      <!--  -->
+          <!-- <div class="modal_bottom"> -->
+            <!-- <div class="text_modal_question">У вас нет аккаунта?</div> -->
+            <!-- <div class="text_center"> -->
+              <!-- <a href="/registration/" class="link_text link_border ">Регистрация</a> -->
+            <!-- </div> -->
+          <!-- </div> -->
+<!-- </center> -->
+<!--  -->
+
+<hr>
+<button>
+        <div class="modal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+</button>
+<hr>
+
+<div class="wrap">
+
+  <div class="cart">
+    <div class="front"><img src="http://placehold.it/140x200/cc0"></div>
+    <div class="back"><img src="http://placehold.it/140x200/c00"></div>
+  </div>
+
+  <div class="cart">
+    <div class="front"><img src="http://placehold.it/140x200/cc0"></div>
+    <div class="back"><img src="http://placehold.it/140x200/c00"></div>
+  </div>
+
+  <div class="cart">
+    <div class="front"><img src="http://placehold.it/140x200/cc0"></div>
+    <div class="back"><img src="http://placehold.it/140x200/c00"></div>
+  </div>
+
+  <div class="cart">
+    <div class="front"><img src="http://placehold.it/140x200/cc0"></div>
+    <div class="back"><img src="http://placehold.it/140x200/c00"></div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="catalog_block"> -->
+    <!-- <span class="close_menu"></span> -->
+    <!-- <span class="close_right"></span> -->
+    <!-- <div class="mobile_account_cart"> -->
+      <!-- <a href="/login/" title="Войти в личный кабинет" class="m_login ">Войти</a> -->
+<!--  -->
+      <!-- <a href="/cart/" class="m_cart">Корзина</a> -->
+    <!-- </div> -->
+    <!-- <div class="left_block"> -->
+              <!-- <a href="/hits/" class="cp_link">Хиты продаж</a> -->
+                          <!-- <a href="/podarochnye-nabory/" data-id="12" class="cp_link  ">Подарочные наборы</a> -->
+              <!-- <a href="/orehi/" data-id="1" class="cp_link  ">Орехи</a> -->
+              <!-- <a href="/suhofrukty/" data-id="2" class="cp_link  ">Сухофрукты</a> -->
+              <!-- <a href="/sladosti-shokolad-tsukatyi/" data-id="4" class="cp_link has_child ">Сладости, шоколад, цукаты</a> -->
+              <!-- <a href="/makarony-krupy-muka/" data-id="8" class="cp_link has_child ">Макароны, крупы, мука</a> -->
+              <!-- <a href="/pripravyi-sol-sahar/" data-id="3" class="cp_link has_child ">Приправы, соль, сахар</a> -->
+              <!-- <a href="/sneki-batonchiki/" data-id="5" class="cp_link has_child ">Снеки, батончики</a> -->
+              <!-- <a href="/konservatsiya/" data-id="9" class="cp_link has_child ">Консервация</a> -->
+              <!-- <a href="/chay-kofe-kakao/" data-id="6" class="cp_link has_child ">Чай, кофе, какао</a> -->
+              <!-- <a href="/gotovye-korobki/" data-id="53" class="cp_link  ">Готовые коробки</a> -->
+              <!-- <a href="/voda-soki-napitki/" data-id="11" class="cp_link has_child ">Вода, соки, напитки</a> -->
+              <!-- <a href="/masla-sousy-uksus/" data-id="7" class="cp_link has_child ">Масла, соусы, уксус</a> -->
+              <!-- <a href="/delikatesy/" data-id="13" class="cp_link has_child ">Деликатесы</a> -->
+              <!-- <a href="/suhie-zavtraki-kashi/" data-id="14" class="cp_link has_child no_border">Сухие завтраки, каши</a> -->
+      <!--  -->
+        <!-- <ul class="m_menu pages"> -->
+          <!-- <li><a href="/dostavka-orehov-suhofruktov-speciy/">Оплата и доставка</a></li> -->
+          <!-- <li><a href="/schedule/">График работы</a></li> -->
+          <!-- <li><a href="/discounts/">Скидки и акции</a></li> -->
+          <!-- <li><a href="/reviews/">Отзывы</a></li> -->
+          <!-- <li><a href="/about/">О компании</a></li> -->
+          <!-- <li><a href="/programma-loyalnosti/">Программа лояльности</a></li> -->
+          <!-- <li><a href="/contact/">Контакты</a></li> -->
+          <!-- <li><a href="/craft-packets/">Наша упаковка</a></li> -->
+          <!-- <li><a href="/kak-sdelat-zakaz/">Как заказать</a></li> -->
+          <!-- <li><a href="/voprosy-i-otvety/">Вопросы и ответы</a></li> -->
+          <!-- <li><a href="/agreement/">Условия продажи</a></li> -->
+        <!-- </ul> -->
+    <!-- </div> -->
+    <!-- <div class="right_block clearfix"> -->
+            <!-- <div class="subcategs hide" id="parent_4"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Сладости, шоколад, цукаты</span> -->
+<!--  -->
+            <!-- <a href="/sladosti-shokolad-tsukatyi/" class="cp_link2 cpl_desc">Сладости, шоколад, цукаты</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/sladosti-shokolad-tsukatyi/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/tsukaty/" class="cp_sublink">Цукаты</a> -->
+                <!-- <a href="/vostochnye-sladosti/" class="cp_sublink">Восточные сладости</a> -->
+                <!-- <a href="/shokolad-i-konfety/" class="cp_sublink">Шоколад и конфеты</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- <div class="subcategs hide" id="parent_8"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Макароны, крупы, мука</span> -->
+<!--  -->
+            <!-- <a href="/makarony-krupy-muka/" class="cp_link2 cpl_desc">Макароны, крупы, мука</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/makarony-krupy-muka/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/makarony-pasta/" class="cp_sublink">Макароны, паста</a> -->
+                <!-- <a href="/krupy-i-bobovye/" class="cp_sublink">Крупы и бобовые</a> -->
+                <!-- <a href="/muka/" class="cp_sublink">Мука</a> -->
+                <!-- <a href="/produkty-bustrogo-prigotovleniya/" class="cp_sublink">Продукты быстрого приготовления</a> -->
+            <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+            <!-- <div class="subcategs hide" id="parent_3"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Приправы, соль, сахар</span> -->
+<!--  -->
+<!--  -->
+            <!-- <a href="/pripravyi-sol-sahar/" class="cp_link2 cpl_desc">Приправы, соль, сахар</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/pripravyi-sol-sahar/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/spetsii/" class="cp_sublink">Специи</a> -->
+                <!-- <a href="/pripravy/" class="cp_sublink">Приправы</a> -->
+                <!-- <a href="/marinady/" class="cp_sublink">Маринады</a> -->
+                <!-- <a href="/sahar/" class="cp_sublink">Сахар</a> -->
+                <!-- <a href="/vse-dlya-vypechki/" class="cp_sublink">Все для выпечки</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+            <!-- <div class="subcategs hide" id="parent_5"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Снеки, батончики</span> -->
+<!--  -->
+            <!-- <a href="/sneki-batonchiki/" class="cp_link2 cpl_desc">Снеки, батончики</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/sneki-batonchiki/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/sneki/" class="cp_sublink">Снеки</a> -->
+                <!-- <a href="/batonchiki/" class="cp_sublink">Батончики</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+            <!-- <div class="subcategs hide" id="parent_9"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Консервация</span> -->
+<!--  -->
+            <!-- <a href="/konservatsiya/" class="cp_link2 cpl_desc">Консервация</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/konservatsiya/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/olivki-masliny/" class="cp_sublink">Оливки, маслины</a> -->
+                <!-- <a href="/siropy/" class="cp_sublink">Сиропы</a> -->
+                <!-- <a href="/urbech/" class="cp_sublink">Урбеч</a> -->
+                <!-- <a href="/myasnye-konservy/" class="cp_sublink">Мясные консервы</a> -->
+                <!-- <a href="/rybnyie-konservy/" class="cp_sublink">Рыбные консервы</a> -->
+                <!-- <a href="/ovoshnye-konservy/" class="cp_sublink">Овощные консервы</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+            <!-- <div class="subcategs hide" id="parent_6"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Чай, кофе, какао</span> -->
+<!--  -->
+            <!-- <a href="/chay-kofe-kakao/" class="cp_link2 cpl_desc">Чай, кофе, какао</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/chay-kofe-kakao/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/chay/" class="cp_sublink">Чай</a> -->
+                <!-- <a href="/kofe/" class="cp_sublink">Кофе</a> -->
+                <!-- <a href="/kakao/" class="cp_sublink">Какао</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <!-- <div class="subcategs hide" id="parent_11"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Вода, соки, напитки</span> -->
+<!--  -->
+            <!-- <a href="/voda-soki-napitki/" class="cp_link2 cpl_desc">Вода, соки, напитки</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/voda-soki-napitki/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/soki/" class="cp_sublink">Соки</a> -->
+                <!-- <a href="/napitki/" class="cp_sublink">Напитки</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+         <!-- <div class="subcategs hide" id="parent_7"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Масла, соусы, уксус</span> -->
+<!--  -->
+            <!-- <a href="/masla-sousy-uksus/" class="cp_link2 cpl_desc">Масла, соусы, уксус</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/masla-sousy-uksus/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/rastitelnoe-maslo/" class="cp_sublink">Растительное масло</a> -->
+                <!-- <a href="/sousy/" class="cp_sublink">Соусы</a> -->
+                <!-- <a href="/uksus/" class="cp_sublink">Уксус</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <!-- <div class="subcategs hide" id="parent_13"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Деликатесы</span> -->
+<!--  -->
+            <!-- <a href="/delikatesy/" class="cp_link2 cpl_desc">Деликатесы</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/delikatesy/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/myasnyie-delikatesy/" class="cp_sublink">Мясные деликатесы</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <!-- <div class="subcategs hide" id="parent_14"> -->
+            <!-- <span class="menu_back cpl_mob" data-parentclass="subcategory">Назад</span> -->
+<!--  -->
+            <!-- <span class="category_name cpl_mob">Сухие завтраки, каши</span> -->
+<!--  -->
+            <!-- <a href="/suhie-zavtraki-kashi/" class="cp_link2 cpl_desc">Сухие завтраки, каши</a> -->
+            <!-- <div> -->
+              <!-- <div class="collum_subcategories"> -->
+                <!-- <a href="/suhie-zavtraki-kashi/" class="cp_sublink cpl_mob">Все товары категории</a> -->
+                <!-- <a href="/myusli/" class="cp_sublink">Мюсли</a> -->
+             <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+      <!-- </div> -->
+  <!-- </div> -->
+
+{% endblock %}

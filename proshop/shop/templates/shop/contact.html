@@ -1,0 +1,55 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} ГЛАВНАЯ СТРАНИЦА {% endblock %}
+{% block head %} 
+<style>
+  .shadowbox {
+      border: 1px solid #212120;
+      box-shadow: 8px 8px 5px #444;
+      padding: 8px 12px;
+      background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+    .layer {
+      background: #e6c69f ;    
+     }
+    .layer1 {
+        width: 520px;
+        background: #e6c69f ;
+        border: 2px solid #9c6a3e; /* Параметры рамки */
+        padding-bottom: 8px; /* Поле снизу от текста */
+        padding-top: 8px; /* Поле сверху от текста */
+        padding-left: 13px;
+        padding-right: 13px;
+        box-shadow: 8px 8px 5px #444;
+        /* float: left; /*Обтекание по правому краю */
+    }
+</style>
+{% endblock %}
+
+{% block content %} 
+<br>
+<center>
+    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+        <p><i class="fas fa-home me-3 text-secondary"></i> Санкт-Петербург </p>
+        <p>
+          <i class="fas fa-envelope me-3 text-secondary"></i>
+          info@example.com
+        </p>
+        <p><i class="fas fa-phone me-3 text-secondary"></i> + 8(812) 000 00 00</p>
+        <p><i class="fas fa-print me-3 text-secondary"></i> + 8(812) 000 00 00</p>
+      </div>
+</center>
+
+
+<hr>
+</center>
+<div style="margin: auto;"> 
+  <center>
+    <img src="{% static 'shop/r31.png' %}" width="1890" height="300" alt="My image"> 
+  </center>
+  </style>
+</div> 
+ 
+{% endblock %}

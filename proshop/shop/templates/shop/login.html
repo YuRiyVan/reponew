@@ -1,0 +1,87 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} СТРАНИЦА АВТОРИЗАЦИИ {% endblock %}
+{% block head %} 
+<style type="text/css">
+      .shadowbox {
+      border: 1px solid #212120;
+      box-shadow: 8px 8px 5px #444;
+      padding: 8px 12px;
+      background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+      .layer {
+    background: #e6c69f ;
+    border: 2px solid #000; /* Параметры рамки */
+    padding-bottom: 13px; /* Поле снизу от текста */
+    padding-top: 13px; /* Поле сверху от текста */
+    scroll-padding-left: 13px;
+    scroll-padding-right: 13px;
+    text-align: center; /* Выравнивание по центру */
+   }
+     .layer1 {
+        width: 680px;
+        background: #e8cba7 ;    
+       }
+
+</style>
+<style type="text/css">
+    .space { 
+     width: 680px; /* Ширина элемента в пикселах */
+     padding-bottom: 8px; /* Поле снизу от текста */
+     padding-top: 8px; /* Поле сверху от текста */
+     padding-right: 15px; /* Поля */
+     padding-left: 15px; /* Поля */
+     background: #E5D3BD; /* Цвет фона */
+     border: 1px solid #7a4928; /* Параметры рамки */
+     margin: auto;
+     
+    }
+</style>
+
+
+{% endblock %}
+{% block content %} 
+
+<center> 
+    <div class="space , shadowbox  ">
+    <hr>
+    <h1> ПОЗДРАВЛЯЕМ с УСПЕШНОЙ РЕГИСТРАЦИЕЙ  </h1>
+    <hr>
+    </div>
+</center> 
+<hr>
+<form action="" method="POST" >
+  {% csrf_token %}
+
+<Center>
+<div class="space , shadowbox ">           
+<form action="" method="POST" >
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1"> Name </label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name" name="username">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput2"> Last_Name </label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter last name" name="last_name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</Center>
+<hr>
+{% endblock %}

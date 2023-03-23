@@ -1,0 +1,54 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+{% block head %} 
+<style>
+   .shadowbox {
+      border: 1px solid #212120;
+      box-shadow: 8px 8px 5px #444;
+      padding: 8px 12px;
+      background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+      .layer1 {
+        width: 520px;
+        background: #e6c69f ;
+        border: 2px solid #9c6a3e; /* Параметры рамки */
+        padding-bottom: 8px; /* Поле снизу от текста */
+        padding-top: 8px; /* Поле сверху от текста */
+        padding-left: 13px;
+        padding-right: 13px;
+        box-shadow: 8px 8px 5px #444;
+        float: left; /* Обтекание по правому краю */
+    }
+         
+     .layer2 {
+     background-color: #ffffff; /* Цвет фона слоя */
+     padding: 5px; /* Поля вокруг текста */
+     width: 340px; /* Ширина слоя */
+     float: left; /* Обтекание по правому краю */ 
+    }
+</style>
+{% endblock %}
+{% block content %} 
+
+<center>
+<h3> {{ name }} </h3>
+{% for i in data %}
+ <div class="  shadowbox , layer1">
+    <h1 class="card-title">  {{ i.name }}   </h1>
+    <h2 class="card-text"> {{ i.description }}</h2>
+    <h1 class="card-text"> {{ i.price }} </h1>
+    <a href="../product/{{ i.id}}    "> На страницу товара</a>
+ </div>
+ <div class="layer2">
+    <button><img src="{% static 'shop/ok.jpg' %}" width="310" height="200" alt="My image"></button>
+ </div>
+ 
+ {% endfor %}
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
